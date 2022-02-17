@@ -9,7 +9,7 @@
     "bootstrap": "run-s bootstrap:*",
     "bootstrap:dev": "dotenv -c local -- wsrun -msc bootstrap resources resources.dev",
     "bootstrap:vocabs": "dotenv -c local -- wsrun -msc bootstrap:vocabs",
-    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name APP_NAME --user SPARQL_USER --password SPARQL_PASSWORD --routePath \"$API_ROOTS\"",
+    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name APP_NAME --user $SPARQL_USER --password $SPARQL_PASSWORD --routePath \"$API_ROOTS\"",
     "precommit": "yarn lint && wsrun -m -c precommit",
     "build": "yarn wsrun -m -c build",
     "serve": "dotenv -e .env.lando -- node server.js"
