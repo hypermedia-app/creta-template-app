@@ -19,12 +19,14 @@ app.use(process.env.UI_PATH, conditional(
 ))
 
 const apis = knossos.default({
-  endpointUrl: `${process.env.DB_URL}`,
+  endpointUrl: `${process.env.SPARQL_ENDPOINT}`,
   name: process.env.APP_NAME,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
+  user: process.env.SPARQL_USER,
+  password: process.env.SPARQL_PASSWORD,
 })
 
-app.use(pathToRegexp(process.env.API_ROOTS, [], { end: false }), apis)
+app.use('/', apis)
+// use this if serving multiple APIs
+// app.use(pathToRegexp(process.env.API_ROOTS, [], { end: false }), apis)
 
 app.listen(parseInt(process.env.PORT, 10) || 8080)
