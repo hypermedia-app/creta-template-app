@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@hydrofoil/knossos": "^0.5.0",
+    "@hydrofoil/knossos": "^0.6.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-conditional-middleware": "^2.1.1",
@@ -51,9 +51,6 @@
     "apps/*",
     "packages/*"
   ],
-  "resolutions": {
-    "rdf-loaders-registry": "0.3.0"
-  },
   "lint-staged": {
     "*.{js,ts}": [
       "eslint --fix --quiet"
