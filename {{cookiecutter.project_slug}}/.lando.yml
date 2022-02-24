@@ -1,4 +1,4 @@
-name: rhodos
+name: {{cookiecutter.app_name}}
 env_file:
   - .env.local
   - .env
@@ -31,8 +31,8 @@ services:
       agconfig:
     run:
       - agtool users add --server $AGTOOL_SERVER $SPARQL_USER $SPARQL_PASSWORD || true
-      - agtool users grant --server $AGTOOL_SERVER $SPARQL_USER root:$APP_NAME:rw || true
-      - agtool repos create $AGTOOL_SERVER/repositories/$APP_NAME || true
+      - agtool users grant --server $AGTOOL_SERVER $SPARQL_USER root:{{cookiecutter.app_name}}:rw || true
+      - agtool repos create $AGTOOL_SERVER/repositories/{{cookiecutter.app_name}} || true
     services:
       image: franzinc/agraph
       command: /entrypoint.sh
@@ -70,12 +70,12 @@ tooling:
 
 proxy:
   store:
-    - db.rhodos.lndo.site:10035
+    - db.{{ cookicutter.app_name}}.lndo.site:10035
   apis:
-    - rhodos.lndo.site:8888
+    - {{ cookicutter.app_name}}.lndo.site:8888
   trifid:
-    - trifid.rhodos.lndo.site:8080
+    - trifid.{{ cookicutter.app_name}}.lndo.site:8080
   ontodia:
-    - explore.rhodos.lndo.site:8080
+    - explore.{{ cookicutter.app_name}}.lndo.site:8080
   www:
-    - rhodos.lndo.site:8080/app
+    - {{ cookicutter.app_name}}.lndo.site:8080/app

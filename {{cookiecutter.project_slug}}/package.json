@@ -1,5 +1,5 @@
 {
-  "name": "hypermedia.app",
+  "name": "{{cookiecutter.organization}}",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,13 @@
     "bootstrap": "run-s bootstrap:*",
     "bootstrap:dev": "dotenv -c local -- wsrun -msc bootstrap resources resources.dev",
     "bootstrap:vocabs": "dotenv -c local -- wsrun -msc bootstrap:vocabs",
-    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name $APP_NAME --user $SPARQL_USER --password $SPARQL_PASSWORD --routePath \"$API_ROOTS\"",
+    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name $APP_NAME --user $SPARQL_USER --password $SPARQL_PASSWORD{% if len(cookiecutter.apis) > 1 %} --routePath \"$API_ROOTS\"{% endif %}",
     "precommit": "yarn lint && wsrun -m -c precommit",
     "build": "yarn wsrun -m -c build",
     "serve": "dotenv -e .env.lando -- node server.js"
   },
   "license": "MIT",
+  "author": "{{cookiecutter.author}} <{{cookiecutter.email}}>",
   "dependencies": {
     "@hydrofoil/knossos": "^0.6.0",
     "compression": "^1.7.4",
