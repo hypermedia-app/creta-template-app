@@ -22,15 +22,15 @@ app.use(process.env.UI_PATH, conditional(
 
 const apis = knossos.default({
   endpointUrl: `${process.env.SPARQL_ENDPOINT}`,
-  name: {{cookiecutter.app_name}},
+  name: "{{cookiecutter.app_name}},
   user: process.env.SPARQL_USER,
   password: process.env.SPARQL_PASSWORD,
 })
 
-{% if cookiecutter.apis|length > 1 %}
+{%- if cookiecutter.apis|length > 1 %}
 app.use(pathToRegexp(process.env.API_ROOTS, [], { end: false }), apis)
-{% else %}
+{%- else %}
 app.use('/', apis)
-{% endif %}
+{%- endif %}
 
 app.listen(parseInt(process.env.PORT, 10) || 8080)
