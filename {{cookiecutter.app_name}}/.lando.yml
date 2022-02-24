@@ -70,12 +70,12 @@ tooling:
 
 proxy:
   store:
-    - db.{{ cookicutter.app_name}}.lndo.site:10035
+    - db.{{ cookiecutter.app_name}}.lndo.site:10035
   apis:
-    - {{ cookicutter.app_name}}.lndo.site:8888
+    - {{ cookiecutter.app_name}}.lndo.site:8888
   trifid:
-    - trifid.{{ cookicutter.app_name}}.lndo.site:8080
+    - trifid.{{ cookiecutter.app_name}}.lndo.site:8080
   ontodia:
-    - explore.{{ cookicutter.app_name}}.lndo.site:8080
+    - explore.{{ cookiecutter.app_name}}.lndo.site:8080
   www:
-    - {{ cookicutter.app_name}}.lndo.site:8080/app
+    - {{ cookiecutter.app_name}}.lndo.site:8080/app
