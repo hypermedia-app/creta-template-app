@@ -1,3 +1,3 @@
 """
-{{ cookiecutter.update({"apis": cookiecutter.apis.split(',')}) }}
+{{ cookiecutter.update({"apis": cookiecutter.api_names.split(',')}) }}
 """
