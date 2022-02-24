@@ -3,6 +3,6 @@
   "email": "no-reply@hypermedia.app",
   "project_name": "Hypermedia App",
   "app_name": "rhodos",
-  "organization": "{{ project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "organization": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "apis": "core,users"
 }
