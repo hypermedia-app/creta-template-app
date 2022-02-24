@@ -4,5 +4,6 @@
   "project_name": "Hypermedia App",
   "app_name": "rhodos",
   "organization": "{{ cookiecutter.app_name }}",
+  "project_slug": "{{ cookiecutter.project_name }}",
   "apis": "core,users"
 }
