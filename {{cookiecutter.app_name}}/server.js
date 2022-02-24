@@ -22,7 +22,7 @@ app.use(process.env.UI_PATH, conditional(
 
 const apis = knossos.default({
   endpointUrl: `${process.env.SPARQL_ENDPOINT}`,
-  name: "{{cookiecutter.app_name}},
+  name: "{{cookiecutter.app_name}}",
   user: process.env.SPARQL_USER,
   password: process.env.SPARQL_PASSWORD,
 })
