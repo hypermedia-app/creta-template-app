@@ -3,9 +3,9 @@ const express = require('express')
 const fallback = require('express-history-api-fallback')
 const conditional = require('express-conditional-middleware')
 const knossos = require('@hydrofoil/knossos')
-{% if cookiecutter.apis|length > 1 %}
+{%- if cookiecutter.apis|length > 1 %}
 const { pathToRegexp } = require('path-to-regexp')
-{% endif %}
+{%- endif %}
 const compression = require('compression')
 
 const app = express()
