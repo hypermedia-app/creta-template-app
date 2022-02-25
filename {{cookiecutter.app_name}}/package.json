@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "author": "{{cookiecutter.author}} <{{cookiecutter.email}}>",
-  "repository": "{{cookicutter.repository}}",
+  "repository": "{{cookiecutter.repository}}",
   "dependencies": {
     "@hydrofoil/knossos": "^0.6.0",
     "compression": "^1.7.4",
