@@ -30,7 +30,7 @@ organization:
   help: Used as NPM package prefix
   default: ""
 
-api_names:
+apis:
   type: yaml
 
 repository:
