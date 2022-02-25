@@ -4,5 +4,6 @@
   "project_name": "Hypermedia App",
   "app_name": "rhodos",
   "organization": "{{ cookiecutter.app_name }}",
-  "api_names": "core,users"
+  "api_names": "core,users",
+  "repository": "https://github.com/your/repo",
 }

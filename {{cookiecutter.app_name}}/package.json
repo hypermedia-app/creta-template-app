@@ -1,6 +1,5 @@
 {
   "name": "{{cookiecutter.organization}}",
-  "version": "0.0.0",
   "private": true,
   "scripts": {
     "postinstall": "yarn-deduplicate",
@@ -16,6 +15,7 @@
   },
   "license": "MIT",
   "author": "{{cookiecutter.author}} <{{cookiecutter.email}}>",
+  "repository": "{{cookicutter.repository}}",
   "dependencies": {
     "@hydrofoil/knossos": "^0.6.0",
     "compression": "^1.7.4",
