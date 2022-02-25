@@ -1,6 +1,6 @@
 #!/bin/sh
 
-copier update
+copier -a .copier-workspace.yaml update
 {% for api in apis %}
 copier -a .copier-{{api}}.yml update
 {% endfor %}
