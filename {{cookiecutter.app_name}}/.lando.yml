@@ -10,7 +10,7 @@ services:
     command: nodemon -w packages -w apps -i apps/www --ext ts,js --exec npm --node-options --inspect=0.0.0.0:40989 --inspect start
     ssl: true
     overrides:
-      image: node:14
+      image: node:{{cookiecutter.node_version}}
       ports:
         - '40989:40989'
       environment:
