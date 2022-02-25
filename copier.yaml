@@ -1,6 +1,6 @@
 _subdirectory: src
 _templates_suffix: .jinja
-_answers_file: .copier_workspace.yaml
+_answers_file: .copier-workspace.yaml
 
 _envops:
   block_end_string: "%}"
