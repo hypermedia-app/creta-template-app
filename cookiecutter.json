@@ -5,5 +5,5 @@
   "app_name": "rhodos",
   "organization": "{{ cookiecutter.app_name }}",
   "api_names": "core,users",
-  "repository": "https://github.com/your/repo",
+  "repository": "https://github.com/your/repo"
 }
