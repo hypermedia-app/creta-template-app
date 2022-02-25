@@ -11,6 +11,9 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
+_skip_if_exists:
+  - .copier/apis.sh
+
 author:
   type: str
   help: Author field for package.jsons
@@ -42,3 +45,6 @@ repository:
 node_version:
   type: str
   help: Any valid node version. Used to run local env and CI
+
+api_template:
+  default: https://github.com/hypermedia-app/api-template
