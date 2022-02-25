@@ -32,6 +32,7 @@ organization:
 
 apis:
   type: yaml
+  multiline: true
 
 repository:
   type: str
