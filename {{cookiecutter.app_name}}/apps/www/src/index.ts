@@ -6,4 +6,4 @@ declare module '@hydrofoil/roadshow/lib/ViewContext' {
   interface Params extends State {}
 }
 
-customElements.define('hypermedia-app', App)
+customElements.define('{{cookiecutter.app_name}}/-app', App)
