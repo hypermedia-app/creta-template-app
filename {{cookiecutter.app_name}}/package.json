@@ -2,6 +2,7 @@
   "name": "{{cookiecutter.organization}}",
   "private": true,
   "scripts": {
+    "clean": "git clean -dfx -e node_modules -e .idea -e .vscode",
     "postinstall": "yarn-deduplicate",
     "prepare": "husky install",
     "lint": "eslint . --ext .ts --quiet --ignore-path .gitignore",
