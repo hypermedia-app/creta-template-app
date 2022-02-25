@@ -2,7 +2,7 @@
   "name": "{{organization}}",
   "private": true,
   "scripts": {
-    "clean": "git clean -dfx -e node_modules -e .idea -e .vscode",
+    "clean": "git clean -dfx -e node_modules -e .idea -e .vscode -e .husky",
     "postinstall": "yarn-deduplicate",
     "prepare": "husky install",
     "lint": "eslint . --ext .ts --quiet --ignore-path .gitignore",
