@@ -1,4 +1,5 @@
 _subdirectory: src
+_templates_suffix: .jinja
 
 _envops:
   block_end_string: "%}"
