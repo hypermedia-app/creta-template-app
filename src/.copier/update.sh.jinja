@@ -2,5 +2,5 @@
 
 copier update
 {% for api in apis %}
-copier {{api_template}} -d api={{api}} -d organization={{organization}} #-d vocabs=true
+copier -a .copier-{{api}}.yml update
 {% endfor %}
