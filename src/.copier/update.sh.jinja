@@ -1,4 +1,6 @@
 #!/bin/sh
+
+copier update
 {% for api in apis %}
 copier {{api_template}} -d api={{api}} -d organization={{organization}} #-d vocabs=true
 {% endfor %}

@@ -11,9 +11,6 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
-_skip_if_exists:
-  - .copier/apis.sh
-
 author:
   type: str
   help: Author field for package.jsons
