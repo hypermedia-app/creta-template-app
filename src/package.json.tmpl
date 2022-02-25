@@ -56,6 +56,7 @@
   "lint-staged": {
     "*.{js,ts}": [
       "eslint --fix --quiet"
-    ]
+    ],
+    "*.rej": "exit 1"
   }
 }
