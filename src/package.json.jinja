@@ -6,6 +6,10 @@
     "postinstall": "yarn-deduplicate",
     "prepare": "husky install",
     "lint": "eslint . --ext .ts --quiet --ignore-path .gitignore",
+    "copier:root": "copier -a {{_copier_conf.answers_file}} update",
+    {%- for api in apis %}
+    "copier:{{api}}": "copier -a .copier-{{api}}.yaml update",
+    {%- endfor %}
     "bootstrap": "run-s bootstrap:*",
     "bootstrap:dev": "dotenv -c local -- wsrun -msc bootstrap resources resources.dev",
     "bootstrap:vocabs": "dotenv -c local -- wsrun -msc bootstrap:vocabs",
