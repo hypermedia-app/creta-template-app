@@ -1,5 +1,5 @@
 {
-  "name": "@{{cookiecutter.organization}}/app",
+  "name": "@{{organization}}/app",
   "version": "0.0.0",
   "private": true,
   "scripts": {

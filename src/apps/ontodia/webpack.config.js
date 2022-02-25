@@ -20,7 +20,7 @@ module.exports = merge(
     },
     plugins: [
       new EnvironmentPlugin({
-        TRIFID_ENDPOINT: 'https://trifid.{{cookiecutter.app_name}}.lndo.site/query',
+        TRIFID_ENDPOINT: 'https://trifid.{{app_name}}.lndo.site/query',
       }),
     ],
   },

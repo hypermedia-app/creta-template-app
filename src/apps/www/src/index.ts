@@ -6,4 +6,4 @@ declare module '@hydrofoil/roadshow/lib/ViewContext' {
   interface Params extends State {}
 }
 
-customElements.define('{{cookiecutter.app_name}}-app', App)
+customElements.define('{{app_name}}-app', App)

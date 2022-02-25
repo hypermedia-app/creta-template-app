@@ -1,0 +1,41 @@
+_subdirectory: src
+
+_envops:
+  block_end_string: "%}"
+  block_start_string: "{%"
+  comment_end_string: "#}"
+  comment_start_string: "{#"
+  keep_trailing_newline: true
+  variable_end_string: "}}"
+  variable_start_string: "{{"
+
+author:
+  type: str
+  help: Author field for package.jsons
+
+email:
+  type: str
+  help: Email field for package.jsons
+
+project_name:
+  type: str
+  help: Human-readable name
+
+app_name:
+  type: str
+  help: Short name (no spaces)
+
+organization:
+  type: str
+  help: Used as NPM package prefix
+  default: ""
+
+api_names:
+  type: yaml
+
+repository:
+  type: str
+
+node_version:
+  type: str
+  help: Any valid node version. Used to run local env and CI

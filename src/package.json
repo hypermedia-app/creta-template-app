@@ -1,5 +1,5 @@
 {
-  "name": "{{cookiecutter.organization}}",
+  "name": "{{organization}}",
   "private": true,
   "scripts": {
     "clean": "git clean -dfx -e node_modules -e .idea -e .vscode",
@@ -9,14 +9,14 @@
     "bootstrap": "run-s bootstrap:*",
     "bootstrap:dev": "dotenv -c local -- wsrun -msc bootstrap resources resources.dev",
     "bootstrap:vocabs": "dotenv -c local -- wsrun -msc bootstrap:vocabs",
-    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name $APP_NAME --user $SPARQL_USER --password $SPARQL_PASSWORD{% if cookiecutter.apis|length > 1 %} --routePath \"$API_ROOTS\"{% endif %}",
+    "start": "dotenv -c local -- knossos-ts serve $SPARQL_ENDPOINT --name $APP_NAME --user $SPARQL_USER --password $SPARQL_PASSWORD{% if apis|length > 1 %} --routePath \"$API_ROOTS\"{% endif %}",
     "precommit": "yarn lint && wsrun -m -c precommit",
     "build": "yarn wsrun -m -c build",
     "serve": "dotenv -e .env.lando -- node server.js"
   },
   "license": "MIT",
-  "author": "{{cookiecutter.author}} <{{cookiecutter.email}}>",
-  "repository": "{{cookiecutter.repository}}",
+  "author": "{{author}} <{{email}}>",
+  "repository": "{{repository}}",
   "dependencies": {
     "@hydrofoil/knossos": "^0.6.0",
     "compression": "^1.7.4",

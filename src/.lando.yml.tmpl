@@ -1,4 +1,4 @@
-name: {{cookiecutter.app_name}}
+name: {{app_name}}
 env_file:
   - .env.local
   - .env
@@ -10,7 +10,7 @@ services:
     command: nodemon -w packages -w apps -i apps/www --ext ts,js --exec npm --node-options --inspect=0.0.0.0:40989 --inspect start
     ssl: true
     overrides:
-      image: node:{{cookiecutter.node_version}}
+      image: node:{{node_version}}
       ports:
         - '40989:40989'
       environment:
@@ -31,8 +31,8 @@ services:
       agconfig:
     run:
       - agtool users add --server $AGTOOL_SERVER $SPARQL_USER $SPARQL_PASSWORD || true
-      - agtool users grant --server $AGTOOL_SERVER $SPARQL_USER root:{{cookiecutter.app_name}}:rw || true
-      - agtool repos create $AGTOOL_SERVER/repositories/{{cookiecutter.app_name}} || true
+      - agtool users grant --server $AGTOOL_SERVER $SPARQL_USER root:{{app_name}}:rw || true
+      - agtool repos create $AGTOOL_SERVER/repositories/{{app_name}} || true
     services:
       image: franzinc/agraph
       command: /entrypoint.sh
@@ -70,12 +70,12 @@ tooling:
 
 proxy:
   store:
-    - db.{{ cookiecutter.app_name}}.lndo.site:10035
+    - db.{{ app_name}}.lndo.site:10035
   apis:
-    - {{ cookiecutter.app_name}}.lndo.site:8888
+    - {{ app_name}}.lndo.site:8888
   trifid:
-    - trifid.{{ cookiecutter.app_name}}.lndo.site:8080
+    - trifid.{{ app_name}}.lndo.site:8080
   ontodia:
-    - explore.{{ cookiecutter.app_name}}.lndo.site:8080
+    - explore.{{ app_name}}.lndo.site:8080
   www:
-    - {{ cookiecutter.app_name}}.lndo.site:8080/app
+    - {{ app_name}}.lndo.site:8080/app

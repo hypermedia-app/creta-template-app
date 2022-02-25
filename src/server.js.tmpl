@@ -3,7 +3,7 @@ const express = require('express')
 const fallback = require('express-history-api-fallback')
 const conditional = require('express-conditional-middleware')
 const knossos = require('@hydrofoil/knossos')
-{%- if cookiecutter.apis|length > 1 %}
+{%- if apis|length > 1 %}
 const { pathToRegexp } = require('path-to-regexp')
 {%- endif %}
 const compression = require('compression')
@@ -22,12 +22,12 @@ app.use(process.env.UI_PATH, conditional(
 
 const apis = knossos.default({
   endpointUrl: `${process.env.SPARQL_ENDPOINT}`,
-  name: '{{cookiecutter.app_name}}',
+  name: '{{app_name}}',
   user: process.env.SPARQL_USER,
   password: process.env.SPARQL_PASSWORD,
 })
 
-{%- if cookiecutter.apis|length > 1 %}
+{%- if apis|length > 1 %}
 app.use(pathToRegexp(process.env.API_ROOTS, [], { end: false }), apis)
 {%- else %}
 app.use('/', apis)
