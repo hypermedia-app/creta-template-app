@@ -29,7 +29,7 @@ project_name:
 app_name:
   type: str
   help: Short name (no spaces)
-  default: rhodos
+  default: "{{ project_name.lower() }}"
 
 organization:
   type: str
