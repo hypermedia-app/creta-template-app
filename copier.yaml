@@ -13,7 +13,7 @@ _envops:
 
 _tasks:
   - '{% for api in apis %}npx npm-add-script -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update" -f; {% endfor %}'
-  - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{organization}} copy {{api_template}} .; {% endfor %}'
+  - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{organization}} copy https://github.com/hypermedia-app/creta-api-template.git .; {% endfor %}'
 
 author:
   type: str
@@ -54,9 +54,6 @@ node_version:
   type: str
   help: Any valid node version. Used to run local env and CI
   default: 16
-
-api_template:
-  default: https://github.com/hypermedia-app/creta-api-template.git
 
 debugger_port:
   default: "{{ range(20000,65536) | random }}"
