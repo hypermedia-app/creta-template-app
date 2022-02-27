@@ -53,3 +53,6 @@ node_version:
 
 api_template:
   default: https://github.com/hypermedia-app/creta-api-template.git
+
+debugger_port:
+  default: "{{ range(20000,65536) | random }}"

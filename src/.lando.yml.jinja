@@ -7,17 +7,17 @@ services:
     type: node:custom
     build:
       - npm i -g nodemon
-    command: nodemon -w packages -w apps -i apps/www --ext ts,js --exec npm --node-options --inspect=0.0.0.0:40989 --inspect start
+    command: nodemon -w packages -w apps -i apps/www --ext ts,js --exec npm --node-options --inspect=0.0.0.0:{{ debugger_port }} --inspect start
     ssl: true
     overrides:
       image: node:{{node_version}}
       ports:
-        - '40989:40989'
+        - '{{ debugger_port }}:{{ debugger_port }}'
       environment:
         TS_NODE_TRANSPILE_ONLY: "true"
     scanner: false
     moreHttpPorts:
-      - 40989
+      - {{ debugger_port }}
   www:
     type: node
     command: yarn wsrun -p www -c start --disable-host-check --host 0.0.0.0
