@@ -1,6 +1,6 @@
 # Creta Project Template
 
-A [copier](https://github.com/copier-org/copier/#readme) template to boostrap and maintain web applications built with [creta](https://creta.hypermedia.app/)
+A [copier](https://github.com/copier-org/copier/#readme) template to bootstrap and maintain web applications built with [creta](https://creta.hypermedia.app/)
 
 ## Prerequisites
 
