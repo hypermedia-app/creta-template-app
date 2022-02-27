@@ -44,4 +44,13 @@ See in the ASCIIcasts below how to initialize a `Creta TODOs` project in `creta-
 
 [![asciicast](https://asciinema.org/a/w4NVpT2k99MKWmgI1tbXH7Qsn.svg)](https://asciinema.org/a/w4NVpT2k99MKWmgI1tbXH7Qsn)
 
-This will start all the necessary services, accessible on a local domain (HTTPS included)
+This will start all the necessary services, accessible on a local domain (HTTPS included):
+
+| Service | Local address |
+| -- | -- |
+| Web application | https://creta-todos.lndo.site/app |
+| TODOs API | https://creta-todos.lndo.site/todos |
+| Users API | https://creta-todos.lndo.site/users |
+| Database | http://db.creta-todos.lndo.site/ |
+| Trifid UI | http://trifid.creta-todos.lndo.site/sparql |
+| Graph Explorer | http://explore.creta-todos.lndo.site/ |
