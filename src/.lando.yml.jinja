@@ -20,7 +20,7 @@ services:
       - {{ debugger_port }}
   www:
     type: node
-    command: yarn wsrun -p www -c start --disable-host-check --host 0.0.0.0
+    command: yarn wsrun -p @{{app_name}}/app -c start --disable-host-check --host 0.0.0.0
     ssl: true
     scanner: false
     port: 8080
@@ -60,7 +60,7 @@ services:
         - ./apps/trifid/start.sh:/start.sh
   ontodia:
     type: node
-    command: yarn wsrun -p explorer -c start --disable-host-check --host 0.0.0.0
+    command: yarn wsrun -p @{{app_name}}/explorer -c start --disable-host-check --host 0.0.0.0
     scanner: false
 
 tooling:

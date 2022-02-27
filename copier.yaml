@@ -13,7 +13,7 @@ _envops:
 
 _tasks:
   - '{% for api in apis %}npx npm-add-script -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update" -f; {% endfor %}'
-  - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{organization}} copy https://github.com/hypermedia-app/creta-api-template.git .; {% endfor %}'
+  - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{app_name}} copy https://github.com/hypermedia-app/creta-api-template.git .; {% endfor %}'
 
 author:
   type: str
@@ -34,11 +34,6 @@ app_name:
   type: str
   help: Short name (no spaces)
   default: '{{ project_name.lower().replace(" ", "-") }}'
-
-organization:
-  type: str
-  help: Used as NPM package prefix
-  default: "{{app_name}}"
 
 apis:
   type: yaml
