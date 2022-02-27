@@ -23,7 +23,7 @@ Use this template to initialize a new project:
 
 Then, start by running `lando start`
 
-Finally, running the command `yarn bootstrap` will popualte the database with the minimal resources
+Finally, running the command `yarn bootstrap` will populate the database with the minimal resources
 
 ## What you get
 
