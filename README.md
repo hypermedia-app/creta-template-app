@@ -42,7 +42,7 @@ Depending on the exact answers given to `copier`:
 
 See in the ASCIIcasts below how to initialize a `Creta TODOs` project in `creta-todos` directory. 
 
-[![asciicast](https://asciinema.org/a/w4NVpT2k99MKWmgI1tbXH7Qsn.svg)](https://asciinema.org/a/w4NVpT2k99MKWmgI1tbXH7Qsn)
+[![asciicast](https://asciinema.org/a/RCToq4LcB6YhmKTpS2ILddvsg.svg)](https://asciinema.org/a/RCToq4LcB6YhmKTpS2ILddvsg)
 
 This will start all the necessary services, accessible on a local domain (HTTPS included):
 
