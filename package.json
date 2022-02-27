@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/hypermedia-app/creta-project-template/issues"
   },
-  "homepage": "https://github.com/hypermedia-app/creta-project-template#readme"
+  "homepage": "https://github.com/hypermedia-app/creta-project-template#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.21.0"
+  }
 }

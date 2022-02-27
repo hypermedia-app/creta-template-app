@@ -1,0 +1,15 @@
+name: Tag repository
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: tpluscode/action-autotag@min-version-21
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
