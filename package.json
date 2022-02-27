@@ -1,0 +1,15 @@
+{
+  "name": "@hydrofoil/creta-project-template",
+  "version": "0.0.0",
+  "description": "Use this template to bootstrap a create project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypermedia-app/creta-project-template.git"
+  },
+  "author": "Hypermedia App",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hypermedia-app/creta-project-template/issues"
+  },
+  "homepage": "https://github.com/hypermedia-app/creta-project-template#readme"
+}
