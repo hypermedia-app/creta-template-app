@@ -15,7 +15,7 @@ You will also need [lando](https://github.com/lando/lando/releases) to be able t
 
 Use this template to initialize a new project:
 
-- `copier -a .answers-creta.yaml https://github.com/hypermedia-app/creta-project-template.git {{project-name}}`
+- `copier -a .copier-creta.yaml https://github.com/hypermedia-app/creta-project-template.git {{project-name}}`
    - creates a base project structure in the give directory
 - `cd {{project-name}}`
 - `yarn`
