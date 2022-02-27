@@ -1,4 +1,0 @@
-#!/bin/sh
-{% for api in apis %}
-copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{organization}} copy {{api_template}} .
-{% endfor %}

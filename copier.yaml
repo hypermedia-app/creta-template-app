@@ -11,6 +11,9 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
+_tasks:
+  - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{organization}} copy {{api_template}} .{% endfor %}'
+
 author:
   type: str
   help: Author field for package.jsons
