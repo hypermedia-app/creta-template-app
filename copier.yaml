@@ -12,6 +12,7 @@ _envops:
   variable_start_string: "{{"
 
 _tasks:
+  - "git init"
   - '{% for api in apis %}npx npm-add-script -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update" -f; {% endfor %}'
   - '{% for api in apis %}[ ! -d "apps/{{api}}" ] && copier -a .copier-{{api}}.yaml -d api={{api}} -d organization={{app_name}} copy https://github.com/hypermedia-app/creta-api-template.git .; {% endfor %}'
 
