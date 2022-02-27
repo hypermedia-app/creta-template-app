@@ -34,7 +34,7 @@ app_name:
 organization:
   type: str
   help: Used as NPM package prefix
-  default: {{app_name}}
+  default: "{{app_name}}"
 
 apis:
   type: yaml
