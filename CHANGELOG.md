@@ -1,5 +1,12 @@
 # @hydrofoil/creta-project-template
 
+## 1.1.0
+
+### Minor Changes
+
+- 8241582: Add `vocabs` option and change script
+- 9c81bb2: Create APIs automatically without asking questions
+
 ## 1.0.0
 
 ### Major Changes
