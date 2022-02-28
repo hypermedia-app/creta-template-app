@@ -43,6 +43,20 @@ apis:
   default:
     - api
 
+vocabs:
+  type: yaml
+  when: "{{vocabs}}"
+  default: []
+  multiline: true
+  help: >-
+    Additional vocabularies to insert to the store from vocabulary packages.
+    
+    ⚠️ This must be an array and every entry should be formatted as described on https://creta.hypermedia.app/#/talos?id=additional-vocabularies
+
+    💡 For example:
+      - "@zazuko/rdf-vocabularies,dash,geo"
+      - "@org/vocabularies"
+
 repository:
   type: str
   default: https://github.com/org/repo
