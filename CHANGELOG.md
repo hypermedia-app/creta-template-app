@@ -1,5 +1,13 @@
 # @hydrofoil/creta-project-template
 
+## 1.1.1
+
+### Patch Changes
+
+- c96bfa3: Update knossos
+- 92ebef0: Add talos as dev dependency
+- 60559a6: ENV was not passed to `bootstrap:vocabs` script
+
 ## 1.1.0
 
 ### Minor Changes
