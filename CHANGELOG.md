@@ -1,5 +1,11 @@
 # @hydrofoil/creta-project-template
 
+## 1.1.2
+
+### Patch Changes
+
+- 110fda5: Update API template URL
+
 ## 1.1.1
 
 ### Patch Changes
