@@ -22,6 +22,12 @@ _tasks:
       -e 'this.author=\"{{author}} <{{email}}>\"'
       -e 'this.repository=\"{{repository}}\"'
     "
+  - "npx json -If apps/www/package.json 
+      -e 'this.name=\"@{{app_name}}/app\"'
+    "
+  - "npx json -If apps/ontodia/package.json 
+      -e 'this.name=\"@{{app_name}}/explorer\"'
+    "
   - "sh .copier/generate_apis.sh"
   - "rm -rf .copier"
 
