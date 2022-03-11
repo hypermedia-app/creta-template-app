@@ -1,5 +1,14 @@
 # @hydrofoil/creta-project-template
 
+## 1.2.1
+
+### Patch Changes
+
+- d566c33: Run trifid container as root
+- 4f840c0: Wrong env vars in case of single API package
+- bb7f4e8: build(deps-dev): bump eslint-plugin-promise from 5.2.0 to 6.0.0 in /src
+- 7537b06: build(deps-dev): bump dotenv-cli from 4.1.1 to 5.0.0 in /src
+
 ## 1.2.0
 
 ### Minor Changes
