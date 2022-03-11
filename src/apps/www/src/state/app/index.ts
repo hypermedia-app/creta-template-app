@@ -4,5 +4,5 @@ import effects from './effects'
 export const app = createModel({
   state: {},
   reducers: {},
-  ...effects(),
+  effects,
 })
