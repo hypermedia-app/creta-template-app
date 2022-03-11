@@ -1,5 +1,11 @@
 # @hydrofoil/creta-project-template
 
+## 1.2.0
+
+### Minor Changes
+
+- d1b13d4: Update package.json from tasks
+
 ## 1.1.2
 
 ### Patch Changes
