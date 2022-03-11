@@ -13,7 +13,15 @@ _envops:
 
 _tasks:
   - "git init"
-  - '{% for api in apis %}npx npm-add-script -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update" -f; {% endfor %}'
+  - '{% for api in apis %}npx npm-add-script -f -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update"; {% endfor %}'
+  - 'npx npm-add-script -f -k "bootstrap:vocabs" -v "talos put-vocabs --endpoint \$SPARQL_ENDPOINT --user \$SPARQL_USER --password \$SPARQL_PASSWORD{% for vocab_spec in vocabs %} --extraVocabs {{vocab_spec}}{% endfor %}"'
+  - 'npx npm-add-script -f -k start -v "knossos-ts serve \$SPARQL_ENDPOINT --name \$APP_NAME --user \$SPARQL_USER --password \$SPARQL_PASSWORD{% if apis|length > 1 %} --routePath "\$API_ROOTS"{% endif %}"'
+  - 'npx npm-add-script -f -k "copier:root" -v "copier -a {{_copier_conf.answers_file}} update"'
+  - "npx json -If package.json 
+      -e 'this.name=\"{{app_name}}\"'
+      -e 'this.author=\"{{author}} <{{email}}>\"'
+      -e 'this.repository=\"{{repository}}\"'
+    "
   - "sh .copier/generate_apis.sh"
   - "rm -rf .copier"
 
