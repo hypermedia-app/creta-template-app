@@ -2,4 +2,4 @@
 "@hydrofoil/creta-project-template": patch
 ---
 
-Remove usage of env variable which did not exist
+Remove `UI_PATH` variable and inject from template answer

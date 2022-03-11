@@ -57,6 +57,11 @@ apis:
   default:
     - api
 
+ui_path:
+  type: str
+  help: Path at which to serve the web application (no leading slash)
+  default: app
+
 vocabs:
   type: yaml
   when: "{{vocabs}}"
