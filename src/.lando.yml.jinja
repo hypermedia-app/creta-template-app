@@ -54,6 +54,7 @@ services:
     services:
       image: zazuko/trifid
       command: tini -- /start.sh
+      user: root
       environment:
         DEBUG: "trifid*"
       volumes:
