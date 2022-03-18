@@ -1,4 +1,4 @@
-import { namedNode } from '@rdf-esm/data-model'
+import $rdf from '@rdfjs/data-model'
 import type { DispatchParam, Store } from '../store'
 
 export default function effects(store: Store) {
@@ -13,7 +13,7 @@ export default function effects(store: Store) {
       const { resource } = store.getState().routing
       if (id.value === resource && representation?.root) {
         dispatch.core.setContentResource({
-          id: namedNode(resource),
+          id: $rdf.namedNode(resource),
           pointer: representation.root.pointer,
         })
       }
