@@ -15,6 +15,7 @@ services:
         - '{{ debugger_port }}:{{ debugger_port }}'
       environment:
         TS_NODE_TRANSPILE_ONLY: "true"
+        DEBUG: {{app_name}}*,hydra*,hydra-box*,labyrinth*,SPARQL,-labyrinth:request:headers
     scanner: false
     moreHttpPorts:
       - {{ debugger_port }}
