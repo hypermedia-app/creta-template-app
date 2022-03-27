@@ -1,11 +1,12 @@
 from pathlib import Path
 from os import path
 from copier import run_auto
-copier_base_dir = Path.cwd().parent
+copier_base_dir = Path.cwd()
 
 apis = {{apis}}
 app_name = "{{app_name}}"
 potential_answers_file: Path = Path.cwd() / "copier-{{api}}.yaml"
+# a programmatic way to get "dst_path" argument's value that user provided via the command line...
 
 print("---hej jestem---")
 print(f"copier_base_dir: {copier_base_dir}")
