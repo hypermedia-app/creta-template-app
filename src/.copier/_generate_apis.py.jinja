@@ -11,7 +11,7 @@ print("---hej jestem---")
 
 apis = []
 for api in apis:
-    if path.exists(copier_base_dir/"apps"/api):
+    if not path.exists(copier_base_dir/"apps"/api):
         answers_file = potential_answers_file if potential_answers_file.exists() else None
         run_auto("https://github.com/hypermedia-app/creta-template-api.git",
                  data={'api': api, 'organization': app_name},
