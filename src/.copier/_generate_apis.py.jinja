@@ -1,10 +1,10 @@
 from pathlib import Path
 from os import path
 from copier import run_auto
-copier_base_dir = Path.cwd().parent()
+copier_base_dir = Path.cwd().parent
 
 apis = {{apis}}
-app_name = {{app_name}}
+app_name = "{{app_name}}"
 potential_answers_file: Path = Path.cwd() / "copier-{{api}}.yaml"
 
 print("---hej jestem---")
