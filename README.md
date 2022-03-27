@@ -3,13 +3,22 @@
 A [copier](https://github.com/copier-org/copier/#readme) template to bootstrap and maintain web applications built with [creta](https://creta.hypermedia.app/)
 
 ## Prerequisites
+In your own clean repo ...
+- Firstly, install some common tools if you haven't got them already: 
+   - git installed on your machine (installation instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]) )
+   - Python with Pip - python's package manager ([instructions](https://realpython.com/installing-python/))
 
-First, install copier. The preferred version is 6+, installed from `pipx`
+- Secondly, create a python virtualenv and install copier with it:
+```
+   python -m venv <your-virtualenv's-name-you-prefer>
+   source <your-venv's-name>/bin/activate #for LINUX/MACOS 
+   <your-venv's-name>\Scripts\activate #for WINDOWS
+   pip install copier==6.0.0a9
+   
+```
+   _NOTE: copier's docs recommend installing copier via pipx if used from command-line like here, but we use a .py script in \_tasks that happens to also run copier but from in-python context, so installing copier from pip in a virtualenv like shown in step above will make that .py script see copier properly_   
 
-- [Install pipx](https://github.com/pypa/pipx#install-pipx)
-- `pipx install "copier==6.0.0a9"`
-
-You will also need [lando](https://github.com/lando/lando/releases) to be able to run a local dockerized environment
+- Thirdly, [install Lando](https://github.com/lando/lando/releases) to be able to run a local dockerized environment
 
 ## Usage
 
