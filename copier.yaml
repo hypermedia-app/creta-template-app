@@ -11,8 +11,24 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
+
 _tasks:
   - "git init"
+  - '{% for api in apis %}npx npm-add-script -f -k copier:{{api}} -v "copier -a .copier-{{api}}.yaml update"; {% endfor %}'
+  - 'npx npm-add-script -f -k "bootstrap:vocabs" -v "talos put-vocabs --endpoint \$SPARQL_ENDPOINT --user \$SPARQL_USER --password \$SPARQL_PASSWORD{% for vocab_spec in vocabs %} --extraVocabs {{vocab_spec}}{% endfor %}"'
+  - 'npx npm-add-script -f -k start -v "knossos-ts serve \$SPARQL_ENDPOINT --name \$APP_NAME --user \$SPARQL_USER --password \$SPARQL_PASSWORD{% if apis|length > 1 %} --routePath "\$API_ROOTS"{% endif %}"'
+  - 'npx npm-add-script -f -k "copier:root" -v "copier -a{% for api of apis %} -s apps/{{api}}{% endfor %} {{_copier_conf.answers_file}} update"'
+  - "npx json -If package.json 
+      -e 'this.name=\"{{app_name}}\"'
+      -e 'this.author=\"{{author}} <{{email}}>\"'
+      -e 'this.repository=\"{{repository}}\"'
+    "
+  - "npx json -If apps/www/package.json 
+      -e 'this.name=\"@{{app_name}}/app\"'
+    "
+  - "npx json -If apps/ontodia/package.json 
+      -e 'this.name=\"@{{app_name}}/explorer\"'
+    "
   - "python3 .copier/_generate_apis.py"
   - "python3 _delete_copier_dir_and_self.py"
 
