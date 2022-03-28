@@ -29,8 +29,8 @@ _tasks:
   - "npx json -If apps/ontodia/package.json 
       -e 'this.name=\"@{{app_name}}/explorer\"'
     "
-  - "python3 .copier/_generate_apis.py"
-  - "python3 _delete_copier_dir_and_self.py"
+  - "python3 .copier/_generate_apis.py || python .copier/_generate_apis.py"
+  - "python3 _delete_copier_dir_and_self.py || python _delete_copier_dir_and_self.py"
 
 author:
   type: str
