@@ -5,12 +5,10 @@ copier_base_dir = Path.cwd()
 
 apis = {{apis}}
 app_name = "{{app_name}}"
-potential_answers_file: Path = Path.cwd() / "copier-{{api}}.yaml"
-# a programmatic way to get "dst_path" argument's value that user provided via the command line...
 
 for api in apis:
     if not path.exists(copier_base_dir/"apps"/api):
-        answers_file = potential_answers_file if potential_answers_file.exists() else None
         run_auto("https://github.com/hypermedia-app/creta-template-api.git",
                  data={'api': api, 'organization': app_name},
-                 answers_file=answers_file)
+                 answers_file="copier-{{api}}.yaml",
+                 vcs_ref="HEAD")
