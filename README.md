@@ -13,7 +13,7 @@ In your own clean repo ...
    python -m venv <your-virtualenv's-name-you-prefer>
    source <your-venv's-name>/bin/activate #for LINUX/MACOS 
    <your-venv's-name>\Scripts\activate #for WINDOWS
-   pip install copier==6.0.0a9
+   pip install copier==6.0.0b0
    
 ```
    _NOTE: copier's docs recommend installing copier via pipx if used from command-line like here, but we use a .py script in \_tasks that happens to also run copier but from in-python context, so installing copier from pip in a virtualenv like shown in step above will make that .py script see copier properly_   
