@@ -1,5 +1,21 @@
 # @hydrofoil/creta-project-template
 
+## 2.0.0
+
+### Major Changes
+
+- c1b368a: Update `webpack-loader-rdf` (changes type of exported factory)
+
+### Minor Changes
+
+- abeb059: Update to `@rdfjs/data-model@2`
+
+### Patch Changes
+
+- 5aab612: Template would fail on Windows
+- d74227d: build(deps): bump @hydrofoil/roadshow from 0.3.12 to 0.4.0
+- df9f71c: Skip API dirs in update command
+
 ## 1.2.2
 
 ### Patch Changes
