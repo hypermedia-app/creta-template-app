@@ -4,20 +4,10 @@ A [copier](https://github.com/copier-org/copier/#readme) template to bootstrap a
 
 ## Prerequisites
 In your own clean repo ...
-- Firstly, install some common tools if you haven't got them already: 
-   - git installed on your machine (installation instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]) )
-   - Python with Pip - python's package manager ([instructions](https://realpython.com/installing-python/))
 
-- Secondly, create a python virtualenv and install copier with it:
-```
-   python -m venv <your-virtualenv's-name-you-prefer>
-   source <your-venv's-name>/bin/activate #for LINUX/MACOS 
-   <your-venv's-name>\Scripts\activate #for WINDOWS
-   pip install copier==6.0.0b0
-   
-```
-   _NOTE: copier's docs recommend installing copier via pipx if used from command-line like here, but we use a .py script in \_tasks that happens to also run copier but from in-python context, so installing copier from pip in a virtualenv like shown in step above will make that .py script see copier properly_   
-
+- Firstly, install pipx on your machine if you don't have it already. _([docs for installing pipx](https://github.com/pypa/pipx#install-pipx))_
+- Secondly, install Copier. The minimum required version for this template to work is `v6.0.0b0` (_reason [why](https://github.com/copier-org/copier/discussions/639)_), installed from `pipx`
+   - Run `pipx install "copier==6.0.0b0"` in your terminal
 - Thirdly, [install Lando](https://github.com/lando/lando/releases) to be able to run a local dockerized environment
 
 ## Usage
