@@ -1,0 +1,14 @@
+from pathlib import Path
+from os import path
+from copier import run_auto
+copier_base_dir = Path.cwd()
+
+apis = {{apis}}
+app_name = "{{app_name}}"
+
+for api in apis:
+    if not path.exists(copier_base_dir/"apps"/api):
+        run_auto("https://github.com/hypermedia-app/creta-template-api.git",
+                 data={'api': api, 'organization': app_name},
+                 answers_file=f"copier-{api}.yaml",
+                 vcs_ref="HEAD")

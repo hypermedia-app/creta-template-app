@@ -4,12 +4,10 @@ A [copier](https://github.com/copier-org/copier/#readme) template to bootstrap a
 
 ## Prerequisites
 
-First, install copier. The preferred version is 6+, installed from `pipx`
-
-- [Install pipx](https://github.com/pypa/pipx#install-pipx)
-- `pipx install "copier==6.0.0a9"`
-
-You will also need [lando](https://github.com/lando/lando/releases) to be able to run a local dockerized environment
+- Firstly, install pipx on your machine if you don't have it already. _([docs for installing pipx](https://github.com/pypa/pipx#install-pipx))_
+- Secondly, install Copier. The minimum required version for this template to work is `v6.0.0b0` (_reason [why](https://github.com/copier-org/copier/discussions/639)_), installed from `pipx`
+   - Run `pipx install "copier==6.0.0b0"` in your terminal
+- Thirdly, [install Lando](https://github.com/lando/lando/releases) to be able to run a local dockerized environment
 
 ## Usage
 
