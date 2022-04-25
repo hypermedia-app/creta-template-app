@@ -1,5 +1,15 @@
 # @hydrofoil/creta-project-template
 
+## 2.0.1
+
+### Patch Changes
+
+- c5bc575: Wrong arguments generated in copier update
+- 73033bd: build(deps-dev): bump yarn-deduplicate from 4.0.0 to 5.0.0
+- b1c36d4: fix: API answer files would have wrong names
+- fdd4f00: build(deps-dev): bump eslint-config-standard from 16.0.3 to 17.0.0
+- 4e3d7c0: build(deps-dev): bump standard from 16.0.4 to 17.0.0
+
 ## 2.0.0
 
 ### Major Changes
