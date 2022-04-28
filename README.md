@@ -13,7 +13,7 @@ A [copier](https://github.com/copier-org/copier/#readme) template to bootstrap a
 
 Use this template to initialize a new project:
 
-- `copier -a .copier-creta.yaml https://github.com/hypermedia-app/creta-template-app.git {{project-name}}`
+- `copier -a .copier-creta.yaml gh:hypermedia-app/creta-project-template.git {{project-name}}`
    - creates a base project structure in the give directory
 - `cd {{project-name}}`
 - `yarn`
