@@ -19,7 +19,7 @@
   "author": "",
   "repository": "",
   "dependencies": {
-    "@hydrofoil/knossos": "^0.6.1",
+    "@hydrofoil/knossos": "^0.7.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-conditional-middleware": "^2.1.1",
