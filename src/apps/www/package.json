@@ -20,7 +20,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
     "@open-wc/building-webpack": "^2.13.46",
-    "dotenv-webpack": "^7",
+    "dotenv-webpack": "^8",
     "lit-analyzer": "^1.2.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
