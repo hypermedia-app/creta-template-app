@@ -19,12 +19,14 @@ services:
     scanner: false
     moreHttpPorts:
       - {{ debugger_port }}
+{%- if generate_ui %}
   www:
     type: node
     command: yarn wsrun -p @{{app_name}}/app -c start --disable-host-check --host 0.0.0.0
     ssl: true
     scanner: false
     port: 8080
+{%- endif %}
   store:
     type: compose
     volumes:
@@ -79,5 +81,7 @@ proxy:
     - trifid.{{ app_name}}.lndo.site:8080
   ontodia:
     - explore.{{ app_name}}.lndo.site:8080
+{%- if generate_ui %}
   www:
     - {{ app_name}}.lndo.site:8080/{{ui_path}}
+{%- endif %}

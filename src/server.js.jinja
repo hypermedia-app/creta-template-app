@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires,no-console */
 const express = require('express')
+{%- if generate_ui %}
 const fallback = require('express-history-api-fallback')
 const conditional = require('express-conditional-middleware')
+{%- endif %}
 const knossos = require('@hydrofoil/knossos')
 {%- if apis|length > 1 %}
 const { pathToRegexp } = require('path-to-regexp')
@@ -13,12 +15,14 @@ const app = express()
 app.enable('trust proxy')
 app.use(compression())
 
+{%- if generate_ui %}
 const root = './apps/www/dist'
 app.use('/{{ui_path}}', express.static(root))
 app.use('/{{ui_path}}', conditional(
   req => req.accepts('html'),
   fallback('index.html', { root }),
 ))
+{%- endif %}
 
 const apis = knossos.default({
   endpointUrl: `${process.env.SPARQL_ENDPOINT}`,

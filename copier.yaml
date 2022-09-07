@@ -23,14 +23,15 @@ _tasks:
       -e 'this.author=\"{{author}} <{{email}}>\"'
       -e 'this.repository=\"{{repository}}\"'
     "
-  - "npx json -If apps/www/package.json 
+  - "{% if generate_ui %}npx json -If apps/www/package.json 
       -e 'this.name=\"@{{app_name}}/app\"'
-    "
+     {%- endif %}"
   - "npx json -If apps/ontodia/package.json 
       -e 'this.name=\"@{{app_name}}/explorer\"'
     "
   - ["{{ _copier_python }}", '.copier/_generate_apis.py']
   - ["{{ _copier_python }}", '_delete_copier_dir_and_self.py']
+  - "{% if generate_ui %}npx add-dependencies express-conditional-middleware express-history-api-fallback{% endif %}"
 
 author:
   type: str
@@ -52,6 +53,11 @@ app_name:
   help: Short name (no spaces)
   default: '{{ project_name.lower().replace(" ", "-") }}'
 
+generate_ui:
+  type: bool
+  help: Should a web application be generated?
+  default: true
+
 apis:
   type: yaml
   multiline: true
@@ -62,6 +68,7 @@ ui_path:
   type: str
   help: Path at which to serve the web application (no leading slash)
   default: app
+  when: "{{generate_ui}}"
 
 vocabs:
   type: yaml
