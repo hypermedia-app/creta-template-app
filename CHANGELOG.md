@@ -1,5 +1,26 @@
 # @hydrofoil/creta-project-template
 
+## 3.0.0
+
+### Major Changes
+
+- bc591a1: build(deps): bump @hydrofoil/knossos from 0.7.2 to 0.9.5 in /src
+
+### Minor Changes
+
+- 309802e: Add a question to allow skipping the web app project (fixes #54)
+
+### Patch Changes
+
+- 3074ef5: build(deps): bump @hydrofoil/knossos from 0.6.12 to 0.7.0 in /src
+- 40911fc: Added missing eslint-plugin-n
+- ad37175: build(deps-dev): bump eslint-import-resolver-typescript from 2.7.1 to 3.5.0 in /src
+- b1754f5: build(deps-dev): bump dotenv-cli from 5.1.0 to 6.0.0 in /src
+- 3eeb262: build(deps-dev): bump @open-wc/eslint-config from 7.0.0 to 8.0.2 in /src
+- a25c206: build(deps-dev): bump dotenv-webpack from 7.1.1 to 8.0.1 in /src
+- a1db5e0: build(deps-dev): bump yarn-deduplicate from 5.0.2 to 6.0.0 in /src
+- 4be92b6: build(deps-dev): bump dotenv-webpack from 7.1.1 to 8.0.1 in /src/apps/www
+
 ## 2.0.1
 
 ### Patch Changes
