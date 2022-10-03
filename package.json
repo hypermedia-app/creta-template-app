@@ -13,6 +13,6 @@
   },
   "homepage": "https://github.com/hypermedia-app/creta-project-template#readme",
   "devDependencies": {
-    "@changesets/cli": "^2.24.4"
+    "@changesets/cli": "^2.25.0"
   }
 }
