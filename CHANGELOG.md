@@ -1,5 +1,12 @@
 # @hydrofoil/creta-project-template
 
+## 3.0.1
+
+### Patch Changes
+
+- 515795b: build(deps-dev): bump @hydrofoil/talos from 0.4.17 to 0.6.2
+- 8bd9e5a: build(deps-dev): bump @open-wc/eslint-config from 8.0.2 to 9.0.0
+
 ## 3.0.0
 
 ### Major Changes
